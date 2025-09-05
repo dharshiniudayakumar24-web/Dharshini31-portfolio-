@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dharshini · Portfolio</title>
+
+  <!-- CSS file link -->
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome icons -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <nav>
+
+    <div class="logo">Dharshini</div>
+
+    <ul>
+
+      <li><a href="#home" class="active">Home</a></li>
+
+      <li><a href="#about">About</a></li>
+
+      <li><a href="#achievements">Achievements</a></li>
+
+      <li><a href="#projects">Projects</a></li>
+
+      <li><a href="#skills">Skills</a></li>
+
+      <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+  </nav>
+
+  <!-- Home -->
+
+  <section id="home" class="hero">
+
+    <div class="hero-text">
+
+      <h2>Hello, I'm <span>Dharshini</span></h2>
+
+      <p>B.Sc Computer Science (AI) · A passionate learner & future developer 🚀</p>
+
+      <a href="#about" class="btn">Know More</a>
+
+    </div>
+
+    <div class="hero-img">
+
+      <img id="profilePic" alt="My Profile Picture" class="profile-pic"/>
+
+    </div>
+
+  </section>
+
+  <!-- About -->
+
+  <section id="about" class="about">
+
+    <h2>About Me</h2>
+
+    <p>
+
+      Hi, I’m Dharshini 👩‍💻 <br>
+
+      I’m currently pursuing B.Sc. Computer Science with Artificial Intelligence (2nd year).  
+
+      Along with exploring Artificial Intelligence, I enjoy Web Development and Design, where I combine creativity with technology to build engaging projects.  
+
+      I love solving problems, experimenting with new technologies, and continuously improving my coding skills 🚀.
+
+    </p>
+
+  </section>
+
+  <!-- Achievements -->
+
+  <section id="achievements" class="achievements">
+
+    <h2>My Achievements</h2>
+
+    <div class="gallery">
+
+      <div class="card"><p>ADIT Certified</p></div>
+
+      <div class="card"><p>Certified in Generative AI</p></div>
+
+      <div class="card"><p>Certified in Fullstack Web Development</p></div>
+
+    </div>
+
+  </section>
+
+  <!-- Projects -->
+
+  <section id="projects" class="projects">
+
+    <h2>My Projects</h2>
+
+    <div class="gallery">
+
+      <div class="card">
+
+        <h3>Portfolio Website</h3>
+
+        <p>A personal portfolio website built using HTML, CSS, and JavaScript.</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Digital Wellness and Health Insights</h3>
+
+        <p>Using technology safely and getting useful insights to stay healthy and balanced.</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Weather App</h3>
+
+        <p>Web app that fetches live weather data using an API.</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Skills -->
+
+  <section id="skills" class="skills">
+
+    <h2>My Skills</h2>
+
+    <div class="skill">
+
+      <p><i class="fa-brands fa-html5" style="color:#E34F26;"></i> HTML</p>
+
+      <div class="bar"><div class="fill" data-width="80%"></div></div>
+
+    </div>
+
+    <div class="skill">
+
+      <p><i class="fa-brands fa-css3-alt" style="color:#1572B6;"></i> CSS</p>
+
+      <div class="bar"><div class="fill" data-width="85%"></div></div>
+
+    </div>
+
+    <div class="skill">
+
+      <p><i class="fa-brands fa-js" style="color:#F7DF1E;"></i> JavaScript</p>
+
+      <div class="bar"><div class="fill" data-width="75%"></div></div>
+
+    </div>
+
+    <div class="skill">
+
+      <p><i class="fa-brands fa-java" style="color:#007396;"></i> Java</p>
+
+      <div class="bar"><div class="fill" data-width="90%"></div></div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+
+  <section id="contact" class="contact">
+
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+
+      <input type="text" placeholder="Enter your Name" required>
+
+      <input type="tel" placeholder="Enter your Contact Number" required>
+
+      <input type="email" placeholder="Enter your Email Address" required>
+
+      <button type="submit">Submit</button>
+
+    </form>
+
+    <p>Email: <a href="mailto:dharshiniudayakumar24@gmail.com">dharshiniudayakumar24@gmail.com</a></p>
+
+    <p>LinkedIn: <a href="#">linkedin.com/in/dharshini</a></p>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <p>© 2025 Dharshini | All Rights Reserved</p>
+
+  </footer>
+
+  <!-- JS file link -->
+
+  <script src="script.js"></script>
+
+  <!-- Google Drive image loader -->
+
+  <script>
+
+    const DRIVE_INPUT = "1Ze3wfuzJVNasmyq1U2KYwbAzJajTeSoM";
+
+    const id = (String(DRIVE_INPUT).match(/[-\w]{25,}/) || [String(DRIVE_INPUT).trim()])[0];
+
+    const candidates = [
+
+      `https://drive.google.com/uc?export=view&id=${id}`,
+
+      `https://drive.google.com/uc?export=download&id=${id}`,
+
+      `https://drive.usercontent.google.com/uc?id=${id}&export=download`,
+
+      `https://drive.google.com/thumbnail?id=${id}&sz=w2000`
+
+    ];
+
+    const img = document.getElementById("profilePic");
+
+    let i = 0;
+
+    function tryNext() {
+
+      if (i >= candidates.length) {
+
+        img.alt = "⚠️ Could not load image. Check Drive sharing settings.";
+
+        return;
+
+      }
+
+      const url = candidates[i++];
+
+      img.onerror = tryNext;
+
+      img.src = url;
+
+    }
+
+    tryNext();
+
+  </script>
+
+</body>
+
+</html>
